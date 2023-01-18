@@ -1,0 +1,26 @@
+---
+title: "Lab 1"
+author: "Nathanael Reese"
+date: 01.18.2023
+output: html_document
+---
+
+```{r setup, include = FALSE}
+```
+
+# Tasks
+
+## Task 1
+
+``` {r}
+getwd()
+```
+
+## Task 2
+
+``` {r} 
+ddt <- read.csv(file.choose("DDT.csv"))
+head(ddt)
+```
+
+

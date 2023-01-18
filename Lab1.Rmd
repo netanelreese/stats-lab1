@@ -20,9 +20,14 @@ getwd()
 
 ``` {r} 
 ddt <- read.csv(file.choose("DDT.csv"))
-head(ddt)
+head(ddt, n = 6) 
 ```
 
 ## Task 3
-
+ ``` {r}
+mile <- table(ddt$MILE)
+length <- table(ddt$LENGTH)
+weight <- table(ddt$WEIGHT)
+barplot(mile)
+ ```
 

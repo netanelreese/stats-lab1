@@ -163,7 +163,12 @@ with(ddt,boxplot(LENGTH,ylab="LENGTH",col="Blue",notch=TRUE))
 with(ddt,boxplot(WEIGHT,ylab="WEIGHT",col="Green",notch=TRUE))
 with(ddt,boxplot(MILE,ylab="MILE",col="Red",notch=TRUE))
 
+# Mode Function
 
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
 
 
 

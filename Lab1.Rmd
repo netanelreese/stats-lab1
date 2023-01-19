@@ -46,8 +46,7 @@ print(sd(ddt$WEIGHT))
 
 **Rivers Table**
 ```{r}
-rivers = ddt[, c(1)]
-rt =table(rivers)
+rt =table(ddt[, c(1)])
 print(rt)
 ```
 **Color Coded Bar Plot of Rivers**
@@ -55,15 +54,18 @@ print(rt)
 barplot(rt,beside=TRUE,col=rainbow(4))
 ```
 
-## Task 5
-**Species Table**
+**Table of Rivers Crossed with Species of Fish**
 ```{r}
-species = ddt[, c(3)]
-st =table(species)
+
+```
+
+## Task 5
+```{r}
+st =table(ddt[, c(3)])
 ```
 **Pie Chart of Species**
 ```{r}
-pie(rt)
+pie(st)
 ```
 
 **Pie Chart of Rivers**
@@ -73,8 +75,30 @@ pie(rt)
 
 ## Task 6
 
+```{r}
 
+```
 
 ## Task 7
+
+**Coplot of LENGTH Vs WEIGHT given RIVER**
+```{r}
+rivcol=with(ddt, ifelse(RIVER=="FCM","Red",
+                        ifelse(RIVER=="LCM","Blue",
+                               ifelse(RIVER=="SCM","Green","Black"))))
+
+coplot(WEIGHT~LENGTH|RIVER,data=ddt,col=rivcol)
+
+```
+
+**Coplot of DDT Vs WEIGHT given SPECIES**
+
+```{r}
+fishcol=with(ddt,ifelse(SPECIES=="CCATFISH","Red",
+                        ifelse(SPECIES=="SMBUFFALO","Blue","Green")))
+
+coplot(WEIGHT~DDT|SPECIES,data=ddt,col=fishcol)
+
+```
 
 ## Task 8

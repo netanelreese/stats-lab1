@@ -19,15 +19,14 @@ getwd()
 ## Task 2
 
 ``` {r} 
-ddt <- read.csv(file.choose("DDT.csv"))
+ddt <- read.csv("DDT.csv")
 head(ddt, n = 6) 
 ```
 
 ## Task 3
+
  ``` {r}
-mile <- table(ddt$MILE)
-length <- table(ddt$LENGTH)
-weight <- table(ddt$WEIGHT)
-barplot(mile)
+rivsp=with(ddt,table(RIVER, SPECIES))
+rowSums(rivsp)
  ```
 

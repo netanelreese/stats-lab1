@@ -60,11 +60,20 @@ barplot(rt,beside=TRUE,col=rainbow(4))
 ```{r}
 species = ddt[, c(3)]
 st =table(species)
-pie(st)
+```
+**Pie Chart of Species**
+```{r}
+pie(rt)
+```
+
+**Pie Chart of Rivers**
+```{r}
 pie(rt)
 ```
 
 ## Task 6
+
+
 
 ## Task 7
 

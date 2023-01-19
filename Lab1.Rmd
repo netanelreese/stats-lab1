@@ -102,3 +102,7 @@ coplot(WEIGHT~DDT|SPECIES,data=ddt,col=fishcol)
 ```
 
 ## Task 8
+
+```{r}
+ggtitle("Cool and Funky Lab 1 by Nathanael Reese")
+```

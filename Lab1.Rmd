@@ -44,10 +44,25 @@ print(sd(ddt$WEIGHT))
 
 ## Task 4
 
+**Rivers Table**
 ```{r}
+rivers = ddt[, c(1)]
+rt =table(rivers)
+print(rt)
+```
+**Color Coded Bar Plot of Rivers**
+```{r}
+barplot(rt,beside=TRUE,col=rainbow(4))
 ```
 
 ## Task 5
+**Species Table**
+```{r}
+species = ddt[, c(3)]
+st =table(species)
+pie(st)
+pie(rt)
+```
 
 ## Task 6
 

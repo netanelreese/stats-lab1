@@ -75,9 +75,20 @@ pie(rt)
 ```
 
 ## Task 6
-
+**Boxplot of DDT**
 ```{r}
+with(ddt,boxplot(DDT,ylab="DDT",col="Green",notch=TRUE))
+```
 
+**Boxplot of Weight**
+```{r}
+with(ddt,boxplot(WEIGHT,ylab="WEIGHT",col="Red",notch=TRUE))
+
+```
+
+**Boxplot of Length**
+```{r}
+with(ddt,boxplot(LENGTH,ylab="LENGTH",col="Blue",notch=TRUE))
 ```
 
 ## Task 7
@@ -104,5 +115,10 @@ coplot(WEIGHT~DDT|SPECIES,data=ddt,col=fishcol)
 
 ## Task 8
 
+**GGPLOT with name
 ```{r}
+library(dplyr)
+library(ggplot2)
+ddt%>%filter(WEIGHT > 200, LENGTH > 30, DDT < 300)%>%mutate(AREA=LENGTH*WEIGHT)%>%ggplot(aes(x=AREA,y=DDT,fill=RIVER))+geom_boxplot()+ggtitle("Nathanael Reese")
+
 ```

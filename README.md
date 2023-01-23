@@ -9,7 +9,7 @@
 
 [X] Task 5 
 
-[ ] Task 6 
+[X] Task 6 
 
 [X] Task 7 
 

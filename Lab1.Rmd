@@ -119,7 +119,7 @@ coplot(WEIGHT~DDT|SPECIES,data=ddt,col=fishcol)
 ```{r}
 library(dplyr)
 library(ggplot2)
-ddt%>%filter(LENGTH > 30)%>%mutate(AREA=LENGTH*WEIGHT)%>%ggplot(aes(x=SPECIES,y=WEIGHT,fill=RIVER))+geom_boxplot()+ggtitle("Nathanael Reese")
+ddt%>%filter(WEIGHT > 100)%>%ggplot(aes(x=SPECIES,y=WEIGHT,fill=RIVER))+geom_boxplot()+ggtitle("Nathanael Reese")
 ```
 
 **Violin Plot with Name**
@@ -131,5 +131,5 @@ ddt%>%filter(LENGTH > 10)%>%ggplot(aes(x=RIVER,y=LENGTH,fill=SPECIES))+geom_viol
 **Scatter Plot with Name**
 
 ```{r}
-ddt%>%filter(WEIGHT > 200, LENGTH > 30, DDT < 300)%>%mutate(AREA=LENGTH*WEIGHT)%>%ggplot(aes(x=WEIGHT,y=LENGTH,fill=RIVER))+geom_point(size=2, shape=23)+ggtitle("Nathanael Reese")
+ddt%>%filter(WEIGHT > 100, LENGTH > 10)%>%ggplot(aes(x=WEIGHT,y=LENGTH,fill=SPECIES))+geom_point(size=2, shape=23)+ggtitle("Nathanael Reese")
 ```

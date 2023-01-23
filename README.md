@@ -1,10 +1,10 @@
 # Lab 1
-[X] Task 1
-[X] Task 2
-[X] Task 3
-[X] Task 4
-[X] Task 5
-[ ] Task 6
-[X] Task 7
-[ ] Task 8
+[X] Task 1\n
+[X] Task 2\n
+[X] Task 3\n
+[X] Task 4\n
+[X] Task 5\n
+[ ] Task 6\n
+[X] Task 7\n
+[ ] Task 8\n
 
